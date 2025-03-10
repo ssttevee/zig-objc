@@ -174,7 +174,7 @@ fn MsgSendFn(
     comptime Target: type,
     comptime Args: type,
 ) type {
-    const argsInfo = @typeInfo(Args).Struct;
+    const argsInfo = @typeInfo(Args).@"struct";
     assert(argsInfo.is_tuple);
 
     // Target must always be an "id". Lots of types (Class, Object, etc.)
@@ -203,7 +203,7 @@ fn MsgSendFn(
     };
 
     return @Type(.{
-        .Fn = .{
+        .@"fn" = .{
             .calling_convention = .C,
             .is_generic = false,
             .is_var_args = false,

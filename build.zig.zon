@@ -1,12 +1,11 @@
 .{
-    .name = "zig-objc",
+    .name = .objc,
+    .fingerprint = 0x42fb94c820e63e3c,
     .version = "0.0.0",
     .paths = .{
         "src/",
         "build.zig",
         "build.zig.zon",
-        "README.md",
-        "LICENSE",
     },
     .dependencies = .{},
 }
